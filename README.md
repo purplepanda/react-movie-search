@@ -8,4 +8,4 @@ From the project directory, run `npm install`
 
 ## Local Development
 
-From the project directory, run `npm run start`, `npm run test`
+From the project directory, run `npm run start` and `npm run test`
