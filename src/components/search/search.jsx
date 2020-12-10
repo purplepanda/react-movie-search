@@ -49,7 +49,10 @@ const Search = () => {
 					searchResults.map((movie) => {
 						return <>
 							<li key={movie.imdbID}>
-								<MovieTile props={movie}></MovieTile>
+								<MovieTile 
+									selected={false}
+									props={movie}>
+								</MovieTile>
 							</li>
 						</>
 					})
@@ -61,7 +64,6 @@ const Search = () => {
 					<p>{errorMsgValue}</p>
 				</div>
 			: null}
-
 		</div>
 	);
 };
