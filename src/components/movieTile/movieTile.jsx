@@ -3,7 +3,7 @@ import CookieUtils from '../../utilities/cookies.utility';
 
 const MovieTile = ({ props }) => {
 	const [selected, setSelected] = useState(false);
-	const tileClassName = !!selected ? 'tile--selected' : 'tile--deselected';
+	const tileClassName = !!selected ? 'tile tile--selected' : 'tile';
 	const cookieUtils = new CookieUtils();
 
 	const selectMovie = (e) => {
@@ -19,10 +19,10 @@ const MovieTile = ({ props }) => {
 	}
 
 	return (
-		<div className='tile'>
+		<div className={tileClassName}>
 			<button
 				role='link'
-				className={tileClassName}
+				className='tile__btn'
 				data-selected={selected}
 				onClick={selectMovie}>
 
@@ -30,7 +30,7 @@ const MovieTile = ({ props }) => {
 					<img src={props.Poster} alt={props.Title}/>
 				</div>
 				<div className='tile__title'>
-					<h2>{props.Title} ({props.Year})</h2>
+					{props.Title} ({props.Year})
 				</div>
 			</button>
 		</div>

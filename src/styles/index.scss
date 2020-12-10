@@ -1,0 +1,10 @@
+//global styles
+@import 'global/variables';
+@import 'global/buttons';
+@import 'global/base';
+@import 'global/app';
+
+//component styles
+@import '../components/checkoutList/checkoutList.scss';
+@import '../components/movieTile/movieTile.scss';
+@import '../components/search/search.scss';

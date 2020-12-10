@@ -1,0 +1,66 @@
+.search {
+	padding-top: 7rem;
+
+	&__bar {
+		padding: 2rem;
+		position: relative;
+		text-align: center;
+
+		label {
+			position: absolute;
+			left: 50%;
+			transform: translate(-50%, -150%);
+			color: $pink;
+			font-size: 1rem;
+
+			@media ($mediaQueryMobile) {
+				white-space: nowrap;
+				font-size: 1.5rem;
+			}
+		}
+
+		input {
+			font-family: 'Courier New';
+		}
+
+		input[type="text"] {
+			height: 2.5rem;
+			background-color: $lightPink;
+			color: $darkPink;
+			font-weight: bold;
+			font-size: 1rem;
+			padding: 0 .5rem;
+			outline: none;
+			border-color: $pink;
+			border-width: 3px;
+			margin-bottom: 1rem;
+
+			@media ($mediaQueryMobile) {
+				font-size: 1.25rem;
+				padding: 0 1rem;
+				margin-right: 1rem;
+				margin-bottom: 0;
+			}
+
+			&:focus {
+				outline: 2px solid $pink;
+			}
+		}
+
+		input[type="submit"] {
+			@extend .btn-primary;
+		}
+	}
+
+	&__list {
+			display: grid;
+			grid-gap: 1rem;
+			grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+			padding: 1rem;
+
+			li {
+				height: 100%;
+				list-style-type: none;
+			}
+	}
+}

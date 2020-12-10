@@ -1,4 +1,3 @@
-import './App.css';
 import Search from './components/search/search';
 import CheckoutList from './components/checkoutList/checkoutList';
 
